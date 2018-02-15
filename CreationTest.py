@@ -9,7 +9,7 @@ df1 =  df1.join(df.set_index('ID_P_R') , on = 'ID1_G' , rsuffix='_joueur1')
 df1 =  df1.join(df.set_index('ID_P_R') , on = 'ID2_G' , rsuffix='_joueur2')
 df = pd.read_csv('avestats2.csv')
 df1 =  df1.join(df.set_index('ID1_G') , on = 'ID1_G' , rsuffix='_joueur1')
-df1 =  df1.join(df.set_index('ID2_G') , on = 'ID2_G' , rsuffix='_joueur2')
+df1 =  df1.join(df.set_index('ID1_G') , on = 'ID2_G' , rsuffix='_joueur2')
 values = {'POINT_R': 0, 'POINT_R_joueur2': 0, 'POS_R': 901, 'POS_R_joueur2': 901}
 df1 = df1.fillna(value=values)
 print(df1)
